@@ -4,13 +4,13 @@ const shoppingList = ['uova', 'latte', 'cereali', 'pasta', 'verdure', 'nutella' 
 // prendere gli elementi interessati
 const list = document.getElementById('list')
 // creare una variante dei elementi
-let items = 0;
+let items = '';
 // mettere gli elemnti dentro la variante
-while(items < shoppingList.length){
 
-    let listItems = document.createElement('li');
-    listItems.textContent = shoppingList[items]
-    list.appendChild(listItems)
-
-    items++;
+let i = 0;
+while(i < shoppingList.length){
+    items+=`<li>${shoppingList[i]}<li>`;
+    i++;
 }
+
+list.innerHTML = items;
